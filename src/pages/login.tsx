@@ -30,7 +30,7 @@ const Login = () => {
                 _id: user.uid,
             });
 
-            if(res.data){
+            if("data" in res){
                 toast.success(res.data.message);
             }else{
                 const error = res.error as FetchBaseQueryError;
