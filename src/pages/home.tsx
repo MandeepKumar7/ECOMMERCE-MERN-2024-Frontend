@@ -12,7 +12,10 @@ const Home = () => {
 
 
   const {data, isLoading, isError} = useLatestProductsQuery("");
-
+  const ph = data?.products.map((i)=>(
+    i
+  ));
+  console.log(ph);
   const dispatch = useDispatch();
 
   const addToCartHandler = (cartItem:CartItem) => {
@@ -45,7 +48,7 @@ const Home = () => {
               price={i.price} 
               stock={i.stock} 
               handler={addToCartHandler}
-              photo={i.photo} />
+              photos={i.photos} />
           ))
         }
       </main>

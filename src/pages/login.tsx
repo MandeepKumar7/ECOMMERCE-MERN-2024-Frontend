@@ -64,7 +64,7 @@ import { userExist, userNotExist } from "../redux/reducer/userReducer";
             email: user.email!,
             photo: user.photoURL!,
             gender,
-            role: "user",
+            role: "admin",
             dob: date,
             _id: user.uid,
           });
@@ -74,7 +74,7 @@ import { userExist, userNotExist } from "../redux/reducer/userReducer";
             email: user.email!,
             photo: user.photoURL!,
             gender,
-            role: "user",
+            role: "admin",
             dob: date,
             _id: user.uid,
           });
