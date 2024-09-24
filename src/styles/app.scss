@@ -81,7 +81,9 @@
    }
   .header{
     @include flex(row,flex-end,stretch,1.2rem);
-    padding: 1rem;
+    align-items: center;
+    align-content: center;
+    padding: 0.5rem 1rem;
     a{
         color: $color2;
         letter-spacing: 2px;
@@ -98,6 +100,10 @@
         &:hover{
             color: $color3;
         }
+        >img{
+          @include square(2.3rem);
+          border-radius: 50%;
+        }
     }
     dialog{
         border: 1px solid #ccc;
@@ -106,7 +112,7 @@
         width: 100px;
         position: absolute;
         left: calc(100% - 100px);
-        top: 8%;
+        top: 7%;
         >div{
             @include flex(column, flex-start,center, 0.25rem);
         }
