@@ -25,6 +25,8 @@ const Header = ({user}: PropsType) => {
         }
     };
 
+
+
   return (
     <nav className="header">
         <Link onClick={()=>setIsOpen(false)} to={"/"}>HOME</Link>
@@ -34,7 +36,11 @@ const Header = ({user}: PropsType) => {
             user?._id ? (
                 <>
                 <button onClick={()=>setIsOpen((prev)=>!prev)}>
-                    <FaUser />
+                    {
+                        user.photo ?
+                        <img src={user?.photo} alt="User" />
+                        :<FaUser />
+                        }
                 </button>
                 <dialog open={isOpen}>
                     <div>
