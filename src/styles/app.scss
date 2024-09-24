@@ -2,6 +2,9 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
+    &::-webkit-scrollbar{
+      display: none;
+  }
   }
   
   * {
@@ -40,6 +43,7 @@
   @import "shipping.scss";
   @import "login.scss";
   @import "search.scss";
+  @import "footer.scss";
 
   @import "admin-styles/dashboard";
   @import "admin-styles/products";
@@ -68,7 +72,14 @@
 }
 
 
-.header{
+.header-container{
+   @include flex(row,space-between,stretch,1.2rem);
+   align-items: center;
+   .logo{
+    @include heading(3px, 600);
+    margin-left: 3rem;
+   }
+  .header{
     @include flex(row,flex-end,stretch,1.2rem);
     padding: 1rem;
     a{
@@ -100,6 +111,7 @@
             @include flex(column, flex-start,center, 0.25rem);
         }
     }
+}
 }
 
 .not-found{

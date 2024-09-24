@@ -28,6 +28,8 @@ const Header = ({user}: PropsType) => {
 
 
   return (
+    <div className="header-container">
+    <h1 className="logo">Logo</h1>
     <nav className="header">
         <Link onClick={()=>setIsOpen(false)} to={"/"}>HOME</Link>
         <Link onClick={()=>setIsOpen(false)} to={"/search"}> <FaSearch/> {" "} </Link>
@@ -57,6 +59,7 @@ const Header = ({user}: PropsType) => {
             ) : <Link to={"/login"}> <FaSignInAlt/> </Link>
         }
     </nav>
+    </div>
   )
 }
 

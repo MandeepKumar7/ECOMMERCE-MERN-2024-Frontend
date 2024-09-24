@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "./redux/api/userAPI";
 import { UserReducerInitialState } from "./types/reducer-types";
 import ProtectedRoute from "./components/protected-route";
+import Footer from "./components/footer";
 
 
 
@@ -123,6 +124,7 @@ const App = () => {
   
           </Routes>
       </Suspense>
+      <Footer />
       <Toaster position="bottom-center" />
     </Router>
     )
